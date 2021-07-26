@@ -3,9 +3,7 @@ title: Ryandran Naidoo
 role: Senior Consultant
 bio: Senior Consultant with VMware Professional Services
 social: []
-organizations:
-  - name: VMware
-    url: ""
+organizations: []
 superuser: true
 ---
 Welcome to my Blog. I am Ryandran Naidoo a Senior Consultant with VMware Professional Services.
