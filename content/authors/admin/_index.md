@@ -6,7 +6,7 @@ social: []
 organizations: []
 superuser: true
 ---
-Welcome to my Blog. I am Ryandran Naidoo a Senior Consultant with VMware Professional Services.
+I am Ryandran Naidoo a Senior Consultant with VMware Professional Services.
 
 This is a personal blog that I have created that will primarily focus on VMware NSX-T Data Center and its integration will other VMware products.
 
