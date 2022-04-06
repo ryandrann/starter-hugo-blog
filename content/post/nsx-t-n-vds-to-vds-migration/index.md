@@ -6,6 +6,7 @@ draft: false
 featured: false
 tags:
   - NSX-T
+  - VMware
 categories:
   - NSX-T
 image:
