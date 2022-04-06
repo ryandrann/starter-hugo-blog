@@ -1,15 +1,7 @@
 ---
 title: NSX-T -  N-VDS to VDS Migration
 date: 2022-04-06T18:17:39.518Z
-summary: >-
-  Overall, the tool was great and easy in migrating the host switch from N-VDS
-  to VDS. 
-
-
-  Below is a link the the documentation with shows the processes for both the NSX CLI and API options:
-
-
-  <https://docs.vmware.com/en/VMware-NSX-T-Data-Center/3.1/administration/GUID-1039A36F-F55E-4A0A-B6C6-2C383F4A716D.html>
+summary: ""
 draft: false
 featured: false
 tags:
@@ -26,9 +18,9 @@ NSX-T in my homelab was upgraded from NSX-T 2.5.1 to 3.1.3, so NSX-T was still u
 **Initial Configuration:**
 
 2 NICs connected to 10Gbps ports for Management traffic\[vDS].
+
+
 2 NICs connected to 10Gbps ports for workload traffic\[N-VDS].
-
-
 
 ![](initial-config.png)
 
@@ -42,9 +34,9 @@ The following requirements must be met to migrate to a VDS 7.0 host switch:
 
 **Procedure**
 
-The migration can be performed by using the the NSX Manager CLI or API. I chose to us the CLI:
+The migration can be performed by using the the NSX Manager CLI or API. I chose to use the CLI:
 
-1. Log into NSX Manager with the admin user and run the following command to verify that the hosts are ready for migration. The output of the command will be a precheck Id. If any inconsistencies are received, address them and run the pre-check again.
+1. Log into NSX Manager with the admin user and run the following command to verify that the hosts are ready for migration. The output of the command will be a Pre-check ID. If any inconsistencies are received, address them and run the pre-check again.
 
 ```shell
 vds-migrate precheck
@@ -60,8 +52,6 @@ vds-migrate show-topology
 
 ![](topology.png)
 
-
-
 3. Run the following command to create a VDS with the recommended topology, then log into vCenter to verify that the VDS is created, Note that no NICs are assigned to the VDS yet:
 
 ```
@@ -70,13 +60,7 @@ vds-migrate apply-topology
 
 ![](apply.png)
 
-
-
-
-
 ![](apply2.png)
-
-
 
 4. To start the N-VDS to VDS migration, run the following command and specify the Cluster Name(DRS needs to be enabled on the cluster and set to fully automated):
 
@@ -96,10 +80,16 @@ vds-migrate esxi-cluster-name <cluster-name>
 
 ![](attachedvds.png)
 
-
-
 7. A new VDS based transport node profile and uplink profile is created:
 
 ![](newtnp.png)
 
 ![](newup.png)
+
+
+
+Overall, the tool was great and easy in migrating the host switch from N-VDS to VDS. 
+
+Below is a link the the documentation with shows the processes for both the NSX CLI and API options:
+
+<https://docs.vmware.com/en/VMware-NSX-T-Data-Center/3.1/administration/GUID-1039A36F-F55E-4A0A-B6C6-2C383F4A716D.html>
