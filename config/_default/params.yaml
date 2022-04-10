@@ -6,8 +6,8 @@
 # Appearance
 
 theme: starter-blog
-theme_day: Earth
-theme_night: Earth
+theme_day: minimal
+theme_night: minimal
 day_night: true
 font: ''
 font_size: L
