@@ -6,6 +6,7 @@
 # Appearance
 
 theme: starter-blog
+theme_day: Mr Robot
 day_night: true
 font: ''
 font_size: L
