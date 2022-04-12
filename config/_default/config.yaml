@@ -3,9 +3,25 @@
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
-title: Ryandrans Blog # Website name
-baseurl: '' # Website URL
-copyright: '' # Footer text, e.g. '© {year} Me'
+title: Ryandrans Tech Blog # Website name
+baseURL: 'https://ryandran.com/' # Website URL
+
+############################
+## PAGE OPTIONS
+############################
+
+cascade:
+  # Blog post options
+  - _target:
+      path: /post/**
+    editable: true
+    reading_time: true
+    commentable: true
+    show_related: true
+    show_breadcrumb: true
+    header:
+      navbar:
+        enable: false
 
 ############################
 ## LANGUAGE
@@ -25,7 +41,6 @@ module:
     - path: github.com/wowchemy/wowchemy-hugo-modules/wowchemy-cms/v5
     - path: github.com/wowchemy/wowchemy-hugo-modules/wowchemy/v5
 
-
 ############################
 ## ADVANCED
 ############################
@@ -37,24 +52,14 @@ enableEmoji: true
 enableRobotsTXT: true
 footnotereturnlinkcontents: <sup>^</sup>
 ignoreFiles: [\.ipynb$, .ipynb_checkpoints$, \.Rmd$, \.Rmarkdown$, _cache$]
-disableAliases: true
 permalinks:
   authors: '/author/:slug/'
   tags: '/tag/:slug/'
   categories: '/category/:slug/'
+disableAliases: true
 outputs:
   home: [HTML, RSS, JSON, WebAppManifest, headers, redirects]
   section: [HTML, RSS]
-markup:
-  defaultMarkdownHandler: goldmark
-  goldmark:
-    renderer:
-      unsafe: true
-  highlight:
-    codeFences: false
-  tableOfContents:
-    startLevel: 2
-    endLevel: 3
 imaging:
   resampleFilter: lanczos
   quality: 75
@@ -64,6 +69,8 @@ taxonomies:
   tag: tags
   category: categories
   author: authors
+markup:
+  _merge: deep
 related:
   threshold: 80
   includeNewer: true
@@ -73,3 +80,7 @@ related:
       weight: 100
     - name: categories
       weight: 70
+security:
+  _merge: deep
+sitemap:
+  _merge: deep
