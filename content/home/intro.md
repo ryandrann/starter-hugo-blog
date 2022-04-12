@@ -13,6 +13,6 @@ title: Ryandrans Tech Blog
 
 design:
   background:
-    color: '#1D428A'
+    color: '#090a0b'
     text_color_light: true
 ---
