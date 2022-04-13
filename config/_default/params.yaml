@@ -22,7 +22,7 @@ twitter: ''
 header:
   navbar:
     enable: true
-    align: r
+    align: l
     show_logo: false
     show_language: false
     show_day_night: true
