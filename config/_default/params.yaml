@@ -5,8 +5,8 @@
 
 # Appearance
 
-  theme_day: custom
-  theme_night: custom
+  theme: custom
+  day_night: true
   font: minimal
   font_size: L
   
