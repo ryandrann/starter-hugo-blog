@@ -7,7 +7,7 @@ headless: true
 
 # Order that this section will appear in.
 weight: 10
-
+title: Ryans blog about VMware Tech
 author: admin
 
 #design:
