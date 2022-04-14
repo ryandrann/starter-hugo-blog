@@ -31,7 +31,7 @@ header:
 
 footer:
   copyright:
-    notice: '© {year}  Ryandran Naidoo. This work is licensed under {license}'
+    notice: false
     license:
       enable: false
       allow_derivatives: false
