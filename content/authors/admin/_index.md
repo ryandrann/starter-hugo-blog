@@ -1,6 +1,6 @@
 ---
 title: Ryandran Naidoo
-role: Senior Consultant
+role: VMware Consultant
 bio: Senior Consultant with VMware Professional Services
 social: []
 organizations: []
