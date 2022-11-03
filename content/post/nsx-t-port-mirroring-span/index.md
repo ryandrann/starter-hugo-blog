@@ -4,7 +4,8 @@ date: 2022-11-03T14:55:18.359Z
 draft: false
 featured: false
 tags:
-  - VMware NSX-T
+  - NSX-T
+  - VMware
 categories:
   - NSX-T
 image:
